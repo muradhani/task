@@ -63,3 +63,5 @@ S
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 ~
 Napp/src/main/java/com/example/task/bindingAdapters/ShowOrHideBindingAdapter.kt,8\f\8f0e7e771fc4935b0556a9a1255b156d941d5111
+s
+Cdata/src/main/java/com/example/data/utils/ConnectivityRepository.kt,4\4\44f13ef7e352276ed01b2c089557ea161c16cec3

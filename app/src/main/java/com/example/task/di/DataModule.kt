@@ -1,9 +1,14 @@
 package com.example.task.di
 
 import android.content.Context
+import androidx.room.Room
+import com.example.data.local.Dao.ProductDao
+import com.example.data.local.Database.AppDatabase
 import com.example.data.mapper.ProductMapper
 import com.example.data.remote.ApiService
 import com.example.data.repo.ProductsRepoImpl
+import com.example.data.utils.ConnectivityRepository
+import com.example.domain.models.product.Product
 import com.example.domain.repoInterface.ProductsRepoInterface
 import dagger.Module
 import dagger.Provides
@@ -20,16 +25,35 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object DataModule {
     @Provides
-    @Singleton
-    fun provideProductRepository(apiService: ApiService,mapper: ProductMapper):ProductsRepoInterface{
-        return ProductsRepoImpl(apiService,mapper)
+    fun provideConnectivityRepository(@ApplicationContext context: Context): ConnectivityRepository {
+        return ConnectivityRepository(context)
     }
-
+    @Provides
+    fun provideRoomDao(
+        db:AppDatabase
+    ): ProductDao {
+        return db.productDao()
+    }
+    @Singleton
+    @Provides
+    fun provideRoomDatabsae(
+        @ApplicationContext context: Context
+    ): AppDatabase {
+        return Room.databaseBuilder(
+            context,
+            AppDatabase::class.java,
+            "app_database"
+        ).build()
+    }
+    @Provides
+    @Singleton
+    fun provideProductRepository(apiService: ApiService,mapper: ProductMapper,checkConnection: ConnectivityRepository,productDao: ProductDao):ProductsRepoInterface{
+        return ProductsRepoImpl(apiService,mapper,checkConnection,productDao)
+    }
     @Provides
     fun provideProductMapper():ProductMapper{
         return ProductMapper()
     }
-
 
     @Provides
     fun provideApiservice(retrofit: Retrofit):ApiService{
@@ -43,7 +67,6 @@ object DataModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-
     @Provides
     fun okhttp(): OkHttpClient {
         return OkHttpClient.Builder()
