@@ -8,70 +8,76 @@
             name="product"
             type="com.example.domain.models.product.Product" />
     </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:paddingHorizontal="@dimen/_10sdp"
         android:layout_height="match_parent"
-        tools:context=".fragments.ProductDetailesFragment">
-        <androidx.cardview.widget.CardView
-            android:id="@+id/image_card_view"
+        android:background="@color/white">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_320sdp"
-            android:layout_margin="@dimen/_15sdp"
-            app:cardElevation="@dimen/_4sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-            <ImageView
+            android:background="@color/white"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            tools:context=".fragments.ProductDetailesFragment">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/image_card_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </androidx.cardview.widget.CardView>
+                android:layout_height="@dimen/_320sdp"
+                android:layout_margin="@dimen/_15sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    setImage="@{product.image}"/>
+            </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/_20sdp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_card_view">
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_card_view">
+
+                <TextView
+                    style="@style/h3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@{product.title}"
+                    android:textStyle="bold"
+                    tools:text="productName" />
+
+                <TextView
+                    style="@style/h3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{'$'+String.valueOf(product.price)}"
+                    android:textColor="@color/g_gray700"
+                    tools:text="$3000" />
+            </LinearLayout>
 
             <TextView
+                android:id="@+id/description"
                 style="@style/h3"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@{product.title}"
-                android:textStyle="bold"
-                tools:text="productName" />
-
-            <TextView
-                style="@style/h3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{'$'+String.valueOf(product.price)}"
+                android:text="@{product.description}"
                 android:textColor="@color/g_gray700"
-                tools:text="$3000" />
-        </LinearLayout>
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                tools:text="description" />
 
-        <TextView
-            android:id="@+id/description"
-            style="@style/h3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@{product.description}"
-            android:textColor="@color/g_gray700"
-            android:maxWidth="@dimen/_250sdp"
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
-            android:ellipsize="end"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            tools:text="description" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

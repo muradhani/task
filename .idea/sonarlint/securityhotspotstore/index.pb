@@ -53,3 +53,11 @@ k
 ;data/src/main/java/com/example/data/mapper/ProductMapper.kt,c\e\ce51e9790c21b5d92da9c80849d73e3526199f08
 v
 Fdomain/src/main/java/com/example/domain/useCases/GetProductsUseCase.kt,6\4\64d763234b2a64bb4de3ac22965837a5a7d80143
+q
+Adomain/src/main/java/com/example/domain/models/product/Product.kt,2\8\282c1c0a4bd89c6d01871f1dedea7cb6d8830d33
+Å
+Q.idea/sonarlint/securityhotspotstore/2/8/282c1c0a4bd89c6d01871f1dedea7cb6d8830d33,3\8\382578fba553992b87c4f47991ed121ba5b5a276
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e

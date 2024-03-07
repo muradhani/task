@@ -14,9 +14,9 @@ class ProductsRvAdapter (
         binding.btnSeeProduct.setOnClickListener {
             productListnter.onProductClicked(item)
         }
-        binding.root.setOnClickListener{
-            productListnter.onProductClicked(item)
-        }
+//        binding.root.setOnClickListener{
+//            productListnter.onProductClicked(item)
+//        }
     }
 
     override fun getLayoutId(): Int {

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.domain.models.product.Product
 import com.example.task.R
 import com.example.task.adapters.ProductListnter
@@ -31,7 +32,8 @@ class ProductsFragment : Fragment() ,ProductListnter{
     }
 
     override fun onProductClicked(product: Product) {
-
+        val action = ProductsFragmentDirections.actionProductsFragmentToProductDetailesFragment(product)
+        findNavController().navigate(action)
     }
 
 
