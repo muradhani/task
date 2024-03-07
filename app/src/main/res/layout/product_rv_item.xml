@@ -55,13 +55,13 @@
                 android:id="@+id/tv_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="@dimen/_5sdp"
                 android:fontFamily="@font/sf_pro_display"
                 android:text="@{String.valueOf(product.rating)}"
                 android:textColor="@color/g_gray700"
                 android:textSize="@dimen/_12ssp"
 
-                app:layout_constraintStart_toEndOf="@id/tv_new_price"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@id/tv_new_price"
                 tools:text="3.4" />
 
@@ -82,10 +82,11 @@
                 android:id="@+id/imageView"
                 android:layout_width="@dimen/_14sdp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
                 android:src="@drawable/ic_rate"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_rating"
-                app:layout_constraintStart_toEndOf="@+id/tv_rating"
+
+                app:layout_constraintEnd_toStartOf="@+id/btn_see_product"
                 app:layout_constraintTop_toTopOf="@+id/tv_rating"
                 tools:src="@drawable/ic_rate" />
 
@@ -101,7 +102,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                android:layout_marginHorizontal="@dimen/_15sdp"
                 app:layout_constraintTop_toTopOf="@+id/tv_deal_product_name" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
