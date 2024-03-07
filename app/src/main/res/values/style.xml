@@ -17,6 +17,12 @@
         <item name="android:textColor">@color/g_gray700</item>
         <item name="android:textSize">@dimen/h2TextSize</item>
     </style>
+    <style name="h4">
+        <item name="android:fontFamily">@font/poppins_thin</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/h4TextSize</item>
+    </style>
     <dimen name="h2TextSize">15sp</dimen>
+    <dimen name="h4TextSize">27sp</dimen>
     <dimen name="h3TextSize">20sp</dimen>
 </resources>

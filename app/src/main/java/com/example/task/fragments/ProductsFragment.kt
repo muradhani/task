@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.domain.models.States.State
 import com.example.domain.models.product.Product
 import com.example.task.R
 import com.example.task.adapters.ProductListnter
@@ -20,15 +22,30 @@ class ProductsFragment : Fragment() ,ProductListnter{
 
     private val viewModel: ProductsViewModel by viewModels()
     private lateinit var binding:FragmentProductsBinding
+    private lateinit var adapter : ProductsRvAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentProductsBinding.inflate(inflater)
-        binding.lifecycleOwner = this
-        binding.productsRvAdapter = ProductsRvAdapter(emptyList(),this)
+        binding.lifecycleOwner = viewLifecycleOwner
+        adapter = ProductsRvAdapter(emptyList(),this)
+        binding.productsRvAdapter = adapter
         binding.viewModel = viewModel
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        observeProducts()
+    }
+
+    private fun observeProducts() {
+        viewModel.products.observe(viewLifecycleOwner, Observer {
+            if (it is State.Success){
+                adapter.setData(it.toData()!!)
+            }
+        })
     }
 
     override fun onProductClicked(product: Product) {
