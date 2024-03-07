@@ -44,7 +44,7 @@
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:layout_marginTop="5dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:fontFamily="@font/poppins_light"
                 android:textStyle="bold"
                 android:textColor="@color/black"

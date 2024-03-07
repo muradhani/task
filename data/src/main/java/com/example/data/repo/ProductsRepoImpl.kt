@@ -35,6 +35,8 @@ class ProductsRepoImpl @Inject constructor(
                        var list = productDao.getAllProdcuts()
                        if (list.isNotEmpty()){
                            emit(State.Success(list))
+                       }else{
+                           emit(State.NoDataCached("no internet Connection"))
                        }
                    }
                }
