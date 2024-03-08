@@ -1,12 +1,8 @@
 
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
-b
-2app/src/main/java/com/example/task/MainActivity.kt,c\a\ca681a59079a7e9e0b081dcd4d36ca5a3ad74e7e
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-Y
-)app/src/main/java/com/example/task/App.kt,0\6\06a9027cd237f6edbb54920c793f81f8ebaedf73
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 p
@@ -29,10 +25,6 @@ l
 <data/src/main/java/com/example/data/repo/ProductsRepoImpl.kt,c\8\c84d9b1bd8e098d449e02f54936dc701dd7c85a4
 A
 data/build.gradle,7\2\72c2781d3d9ac8b82a3543f0fba5c796b2975232
-x
-Happ/src/main/java/com/example/task/fragments/ProductDetailesViewModel.kt,a\c\ac0245af60ef0f136398b19d34ef09989a72bda1
-q
-Aapp/src/main/java/com/example/task/fragments/ProductsViewModel.kt,d\e\de540e5fea3fbc23622c33eaada46b352c6eebd5
 k
 ;data/src/main/java/com/example/data/local/Dao/ProductDao.kt,0\3\03b3ce67f13065b29d868f6dd16afa53965ce4c3
 q
@@ -53,15 +45,21 @@ k
 ;data/src/main/java/com/example/data/mapper/ProductMapper.kt,c\e\ce51e9790c21b5d92da9c80849d73e3526199f08
 v
 Fdomain/src/main/java/com/example/domain/useCases/GetProductsUseCase.kt,6\4\64d763234b2a64bb4de3ac22965837a5a7d80143
-q
-Adomain/src/main/java/com/example/domain/models/product/Product.kt,2\8\282c1c0a4bd89c6d01871f1dedea7cb6d8830d33
 
 Q.idea/sonarlint/securityhotspotstore/2/8/282c1c0a4bd89c6d01871f1dedea7cb6d8830d33,3\8\382578fba553992b87c4f47991ed121ba5b5a276
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
-~
-Napp/src/main/java/com/example/task/bindingAdapters/ShowOrHideBindingAdapter.kt,8\f\8f0e7e771fc4935b0556a9a1255b156d941d5111
 s
 Cdata/src/main/java/com/example/data/utils/ConnectivityRepository.kt,4\4\44f13ef7e352276ed01b2c089557ea161c16cec3
+r
+Bapp/src/main/java/com/example/task/viewModels/ProductsViewModel.kt,0\e\0e9c12e11da73a699601d99ff7dbb7f61e6733d4
+k
+;domain/src/main/java/com/example/domain/entities/Product.kt,e\9\e9d8cba5a3c922745bce456472ef60250ae962ab
+m
+=app/src/main/java/com/example/task/activities/MainActivity.kt,5\6\563d539a893856bc65d7c7fdf7657f9de9284c0f
+\
+,app/src/main/java/com/example/task/di/App.kt,e\3\e3368ec748afa07f5e4f99539394fe3623581547
+y
+Iapp/src/main/java/com/example/task/viewModels/ProductDetailesViewModel.kt,a\4\a4c278ade3c1243deaef705dd4a61fdea9be46d3

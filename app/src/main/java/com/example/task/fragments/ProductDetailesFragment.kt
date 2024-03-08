@@ -1,6 +1,5 @@
 package com.example.task.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
-import com.example.task.R
 import com.example.task.databinding.FragmentProductDetailesBinding
-import com.example.task.databinding.FragmentProductsBinding
+import com.example.task.viewModels.ProductDetailesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

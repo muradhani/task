@@ -1,6 +1,6 @@
 package com.example.task.adapters
 
-import com.example.domain.models.product.Product
+import com.example.domain.entities.Product
 import com.example.task.R
 import com.example.task.base.BaseRecyclerViewAdapterAdapter
 import com.example.task.databinding.ProductRvItemBinding

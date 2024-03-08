@@ -4,11 +4,10 @@ import com.example.data.local.Dao.ProductDao
 import com.example.data.mapper.ProductMapper
 import com.example.data.remote.ApiService
 import com.example.data.utils.ConnectivityRepository
-import com.example.domain.models.product.Product
+import com.example.domain.entities.Product
 import com.example.domain.models.States.State
 import com.example.domain.repoInterface.ProductsRepoInterface
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 

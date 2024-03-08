@@ -1,8 +1,8 @@
-package com.example.task
+package com.example.task.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import dagger.hilt.EntryPoint
+import com.example.task.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

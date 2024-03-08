@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.task.fragments.ProductsViewModel" />
+            type="com.example.task.viewModels.ProductsViewModel" />
 
         <variable
             name="productsRvAdapter"
@@ -38,7 +38,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            noDatacachedError="@{viewModel.products}"/>
+            noDataCachedError="@{viewModel.products}"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/products_rv"
             setAdapter="@{productsRvAdapter}"

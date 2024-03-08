@@ -1,4 +1,4 @@
-package com.example.task.fragments
+package com.example.task.viewModels
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

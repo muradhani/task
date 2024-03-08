@@ -29,7 +29,7 @@ fun <DB : ViewDataBinding> setAdapter(view: RecyclerView, adapter: RecyclerView.
 fun <T> manageState(progressBar: ProgressBar, state: State<T>?) {
     progressBar.visibility = if (state is State.Loading) View.VISIBLE else View.GONE
 }
-@BindingAdapter("noDatacachedError")
+@BindingAdapter("noDataCachedError")
 fun <T> noDatacachedError(tv: TextView, state: State<T>?) {
     if (state is State.NoDataCached){
         tv.text = state.message

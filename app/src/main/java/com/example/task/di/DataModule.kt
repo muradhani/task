@@ -8,7 +8,6 @@ import com.example.data.mapper.ProductMapper
 import com.example.data.remote.ApiService
 import com.example.data.repo.ProductsRepoImpl
 import com.example.data.utils.ConnectivityRepository
-import com.example.domain.models.product.Product
 import com.example.domain.repoInterface.ProductsRepoInterface
 import dagger.Module
 import dagger.Provides

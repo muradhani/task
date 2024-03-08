@@ -1,4 +1,4 @@
-package com.example.domain.models.product
+package com.example.domain.entities
 
 
 import android.os.Parcelable

@@ -1,10 +1,9 @@
 package com.example.domain.useCases
 
 import com.example.domain.models.States.State
-import com.example.domain.models.product.Product
+import com.example.domain.entities.Product
 import com.example.domain.repoInterface.ProductsRepoInterface
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 

@@ -2,7 +2,7 @@ package com.example.data.mapper
 
 import com.example.data.dto.ProductsResponseItem
 import com.example.domain.mapperInterface.Mapper
-import com.example.domain.models.product.Product
+import com.example.domain.entities.Product
 import javax.inject.Inject
 
 class ProductMapper @Inject constructor():Mapper<ProductsResponseItem, Product> {

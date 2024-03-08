@@ -1,11 +1,11 @@
-package com.example.task.fragments
+package com.example.task.viewModels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.models.States.State
-import com.example.domain.models.product.Product
+import com.example.domain.entities.Product
 import com.example.domain.useCases.GetProductsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
